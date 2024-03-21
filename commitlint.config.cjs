@@ -7,53 +7,64 @@ module.exports = {
   prompt: {
     settings: {},
     messages: {
+      type: '选择你要提交的类型 :',
+      scope: '选择一个提交范围（可选）:',
       skip: ':skip',
       max: 'upper %d chars',
       min: '%d chars at least',
       emptyWarning: 'can not be empty',
       upperLimitWarning: 'over limit',
-      lowerLimitWarning: 'below limit'
+      lowerLimitWarning: 'below limit',
+      customScope: '请输入自定义的提交范围 :',
+      subject: '填写简短精炼的变更描述 :\n',
+      body: '填写更加详细的变更描述（可选）。使用 "|" 换行 :\n',
+      breaking: '列举非兼容性重大的变更（可选）。使用 "|" 换行 :\n',
+      confirmCommit: '是否提交或修改commit ?'
     },
     types: [
-      { value: 'feat', name: 'feat:     ✨  A new feature', emoji: '✨ ' },
-      { value: 'fix', name: 'fix:      🐛  A bug fix', emoji: '🐛 ' },
-      { value: 'docs', name: 'docs:     📝  Documentation only changes', emoji: '📝 ' },
+      { value: 'feat', name: 'feat:     ✨ 新增功能 | A new feature', emoji: '✨ ' },
+      { value: 'fix', name: 'fix:      🐛 修复缺陷 | A bug fix', emoji: '🐛 ' },
+      { value: 'docs', name: 'docs:     📝 文档更新 | Documentation only changes', emoji: '📝 ' },
       {
         value: 'style',
-        name: 'style:    💄  Changes that do not affect the meaning of the code',
+        name: 'style:    💄 代码格式 | Changes that do not affect the meaning of the code',
         emoji: '💄 '
       },
       {
         value: 'refactor',
-        name: 'refactor: 📦️   A code change that neither fixes a bug nor adds a feature',
+        name: 'refactor: 📦️ 代码重构 | A code change that neither fixes a bug nor adds a feature',
         emoji: '📦️ '
       },
       {
         value: 'perf',
-        name: 'perf:     🚀  A code change that improves performance',
+        name: 'perf:     🚀 性能提升 | A code change that improves performance',
         emoji: '🚀 '
       },
       {
         value: 'test',
-        name: 'test:     🚨  Adding missing tests or correcting existing tests',
+        name: 'test:     🚨 测试相关 | Adding missing tests or correcting existing tests',
         emoji: '🚨 '
       },
       {
         value: 'build',
-        name: 'build:    🛠   Changes that affect the build system or external dependencies',
+        name: 'build:    🛠 构建相关 | Changes that affect the build system or external dependencies',
         emoji: '🛠 '
       },
       {
         value: 'ci',
-        name: 'ci:       🎡  Changes to our CI configuration files and scripts',
+        name: 'ci:       🎡 持续集成 | Changes to our CI configuration files and scripts',
         emoji: '🎡 '
       },
       {
         value: 'chore',
-        name: "chore:    🔨  Other changes that don't modify src or test files",
+        name: "chore:    🔨 其他修改 | Other changes that don't modify src or test files",
         emoji: '🔨 '
       },
-      { value: 'revert', name: 'revert:   ⏪️  Reverts a previous commit', emoji: ':rewind:' }
+      {
+        value: 'revert',
+        name: 'revert:   ⏪️ 回退代码 | Reverts a previous commit',
+        emoji: ':rewind:'
+      }
     ],
     useEmoji: true,
     confirmColorize: true,
