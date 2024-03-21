@@ -13,7 +13,8 @@ module.exports = {
   rules: {
     'no-console': 'off', //【off,error】
     'no-debugger': 'off', //【off,error】
-    '@typescript-eslint/no-explicit-any': 'error' // TS中禁止使用any
+    '@typescript-eslint/no-explicit-any': 'error', // TS中禁止使用any
+    '@typescript-eslint/no-empty-interface': 'error' // 不允许有空的interface导出
   },
   overrides: [
     {
