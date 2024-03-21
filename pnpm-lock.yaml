@@ -82,6 +82,9 @@ devDependencies:
   npm-run-all2:
     specifier: 6.1.2
     version: 6.1.2
+  postcss-html:
+    specifier: 1.6.0
+    version: 1.6.0
   prettier:
     specifier: 3.2.5
     version: 3.2.5
@@ -91,18 +94,12 @@ devDependencies:
   stylelint:
     specifier: 16.2.1
     version: 16.2.1(typescript@5.4.2)
-  stylelint-config-html:
-    specifier: 1.1.0
-    version: 1.1.0(postcss-html@1.6.0)(stylelint@16.2.1)
-  stylelint-config-prettier:
-    specifier: 9.0.5
-    version: 9.0.5(stylelint@16.2.1)
+  stylelint-config-recommended-vue:
+    specifier: 1.5.0
+    version: 1.5.0(postcss-html@1.6.0)(stylelint@16.2.1)
   stylelint-config-standard:
     specifier: 36.0.0
     version: 36.0.0(stylelint@16.2.1)
-  stylelint-config-vue:
-    specifier: 1.0.0
-    version: 1.0.0(prettier@3.2.5)(stylelint@16.2.1)
   typescript:
     specifier: 5.4.2
     version: 5.4.2
@@ -4773,10 +4770,6 @@ packages:
     resolution: {integrity: sha512-7EAHlyLHI56VEIdK57uwHdHKIaAGbnXPiw0yWbarQZOKaKpvUIgW0jWRVLiatnM+XXlSwsanIBH/hzGMJulMow==}
     dev: true
 
-  /picocolors@0.2.1:
-    resolution: {integrity: sha512-cMlDqaLEqfSaW8Z7N5Jw+lyIW869EzT73/F5lhtY9cLGoVxSXznfgfXMO0Z5K0o0Q2TkTXq+0KFsdnSe3jDViA==}
-    dev: true
-
   /picocolors@1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
 
@@ -4862,24 +4855,8 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
-  /postcss-sorting@5.0.1:
-    resolution: {integrity: sha512-Y9fUFkIhfrm6i0Ta3n+89j56EFqaNRdUKqXyRp6kvTcSXnmgEjaVowCXH+JBe9+YKWqd4nc28r2sgwnzJalccA==}
-    engines: {node: '>=8.7.0'}
-    dependencies:
-      lodash: 4.17.21
-      postcss: 7.0.39
-    dev: true
-
   /postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
-    dev: true
-
-  /postcss@7.0.39:
-    resolution: {integrity: sha512-yioayjNbHn6z1/Bywyb2Y4s3yvDAeXGOyxqD+LnVOinq6Mdmd++SW2wUNVzavyyHxd6+DxzWGIuosg6P1Rj8uA==}
-    engines: {node: '>=6.0.0'}
-    dependencies:
-      picocolors: 0.2.1
-      source-map: 0.6.1
     dev: true
 
   /postcss@8.4.37:
@@ -5225,11 +5202,6 @@ packages:
     resolution: {integrity: sha512-itJW8lvSA0TXEphiRoawsCksnlf8SyvmFzIhltqAHluXd88pkCd+cXJVHTDwdCr0IzwptSm035IHQktUu1QUMg==}
     engines: {node: '>=0.10.0'}
 
-  /source-map@0.6.1:
-    resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
-    engines: {node: '>=0.10.0'}
-    dev: true
-
   /speakingurl@14.0.1:
     resolution: {integrity: sha512-1POYv7uv2gXoyGFpBCmpDVSNV74IfsWlDW216UPjbWufNf+bSU6GdbDsxdcxtfwb4xlI3yxzOTKClUosxARYrQ==}
     engines: {node: '>=0.10.0'}
@@ -5363,24 +5335,18 @@ packages:
       stylelint: 16.2.1(typescript@5.4.2)
     dev: true
 
-  /stylelint-config-prettier@6.0.0(stylelint@16.2.1):
-    resolution: {integrity: sha512-f/BKiUAczB4KODC1w5eY6LoNgfq6QzdSnSc4ccAATKo1IfYCuG3IZwaxj/5AAxl1kyaW7kPLBOXG66O4gSIKTQ==}
-    engines: {node: '>= 6', npm: '>= 3'}
-    hasBin: true
+  /stylelint-config-recommended-vue@1.5.0(postcss-html@1.6.0)(stylelint@16.2.1):
+    resolution: {integrity: sha512-65TAK/clUqkNtkZLcuytoxU0URQYlml+30Nhop7sRkCZ/mtWdXt7T+spPSB3KMKlb+82aEVJ4OrcstyDBdbosg==}
+    engines: {node: ^12 || >=14}
     peerDependencies:
-      stylelint: ^9.1.1 || ^10.0.0 || ^11.0.0
+      postcss-html: ^1.0.0
+      stylelint: '>=14.0.0'
     dependencies:
+      postcss-html: 1.6.0
+      semver: 7.6.0
       stylelint: 16.2.1(typescript@5.4.2)
-    dev: true
-
-  /stylelint-config-prettier@9.0.5(stylelint@16.2.1):
-    resolution: {integrity: sha512-U44lELgLZhbAD/xy/vncZ2Pq8sh2TnpiPvo38Ifg9+zeioR+LAkHu0i6YORIOxFafZoVg0xqQwex6e6F25S5XA==}
-    engines: {node: '>= 12'}
-    hasBin: true
-    peerDependencies:
-      stylelint: '>= 11.x < 15'
-    dependencies:
-      stylelint: 16.2.1(typescript@5.4.2)
+      stylelint-config-html: 1.1.0(postcss-html@1.6.0)(stylelint@16.2.1)
+      stylelint-config-recommended: 14.0.0(stylelint@16.2.1)
     dev: true
 
   /stylelint-config-recommended@14.0.0(stylelint@16.2.1):
@@ -5392,23 +5358,6 @@ packages:
       stylelint: 16.2.1(typescript@5.4.2)
     dev: true
 
-  /stylelint-config-recommended@3.0.0(stylelint@16.2.1):
-    resolution: {integrity: sha512-F6yTRuc06xr1h5Qw/ykb2LuFynJ2IxkKfCMf+1xqPffkxh0S09Zc902XCffcsw/XMFq/OzQ1w54fLIDtmRNHnQ==}
-    peerDependencies:
-      stylelint: '>=10.1.0'
-    dependencies:
-      stylelint: 16.2.1(typescript@5.4.2)
-    dev: true
-
-  /stylelint-config-standard@19.0.0(stylelint@16.2.1):
-    resolution: {integrity: sha512-VvcODsL1PryzpYteWZo2YaA5vU/pWfjqBpOvmeA8iB2MteZ/ZhI1O4hnrWMidsS4vmEJpKtjdhLdfGJmmZm6Cg==}
-    peerDependencies:
-      stylelint: '>=10.1.0'
-    dependencies:
-      stylelint: 16.2.1(typescript@5.4.2)
-      stylelint-config-recommended: 3.0.0(stylelint@16.2.1)
-    dev: true
-
   /stylelint-config-standard@36.0.0(stylelint@16.2.1):
     resolution: {integrity: sha512-3Kjyq4d62bYFp/Aq8PMKDwlgUyPU4nacXsjDLWJdNPRUgpuxALu1KnlAHIj36cdtxViVhXexZij65yM0uNIHug==}
     engines: {node: '>=18.12.0'}
@@ -5417,42 +5366,6 @@ packages:
     dependencies:
       stylelint: 16.2.1(typescript@5.4.2)
       stylelint-config-recommended: 14.0.0(stylelint@16.2.1)
-    dev: true
-
-  /stylelint-config-vue@1.0.0(prettier@3.2.5)(stylelint@16.2.1):
-    resolution: {integrity: sha512-SBiEwBZeWw+TuhIAjLBdoFSEzftsMIt74V/qSYXmnJjATxNkjB8AkfMcftT+rfANvnNOsVuwIUxxF5Cm03A0tg==}
-    dependencies:
-      stylelint-config-prettier: 6.0.0(stylelint@16.2.1)
-      stylelint-config-standard: 19.0.0(stylelint@16.2.1)
-      stylelint-order: 3.1.1(stylelint@16.2.1)
-      stylelint-prettier: 1.2.0(prettier@3.2.5)(stylelint@16.2.1)
-    transitivePeerDependencies:
-      - prettier
-      - stylelint
-    dev: true
-
-  /stylelint-order@3.1.1(stylelint@16.2.1):
-    resolution: {integrity: sha512-4gP/r8j/6JGZ/LL41b2sYtQqfwZl4VSqTp7WeIwI67v/OXNQ08dnn64BGXNwAUSgb2+YIvIOxQaMzqMyQMzoyQ==}
-    engines: {node: '>=8.7.0'}
-    peerDependencies:
-      stylelint: '>=10.0.1'
-    dependencies:
-      lodash: 4.17.21
-      postcss: 7.0.39
-      postcss-sorting: 5.0.1
-      stylelint: 16.2.1(typescript@5.4.2)
-    dev: true
-
-  /stylelint-prettier@1.2.0(prettier@3.2.5)(stylelint@16.2.1):
-    resolution: {integrity: sha512-/MYz6W2CNgKHblPzPtk7cybu8H5dGG3c2GevL64RButERj1uJg4SdBIIat1hMfDOmN6QQpldc6tCc//ZAWh9WQ==}
-    engines: {node: '>=6'}
-    peerDependencies:
-      prettier: '>= 0.11.0'
-      stylelint: '>= 9.2.1'
-    dependencies:
-      prettier: 3.2.5
-      prettier-linter-helpers: 1.0.0
-      stylelint: 16.2.1(typescript@5.4.2)
     dev: true
 
   /stylelint@16.2.1(typescript@5.4.2):
